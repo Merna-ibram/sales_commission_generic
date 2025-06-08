@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="view_sales_config_inherit_bi" model="ir.ui.view">
+            <field name="name">view.sales.config.inherit.bi</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+				<xpath expr="//form" position="inside">
+                    <div class="content-group">
+                        <h2>Sales Commission</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="commission_configuration"/>
+                                    <field name="commission_configuration" widget="radio" class="o_light_label"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <label for="commission_discount_account"/>
+                                <div class="text-muted">
+                                    Select account to record commission expenses.
+                                </div>
+                                <div class="mt16">
+                                    <field name="commission_discount_account" class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
